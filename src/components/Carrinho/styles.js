@@ -3,7 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 22px;
+ 
+ 
+
+  flex-grow: 1;
+  overflow: auto;
+
+
+  gap: 12px;
 
   width: 100%;
   max-width: 448px;
@@ -23,8 +30,6 @@ export const Container = styled.div`
     padding: 0 0 22px 0;
   }
   .resumo-compras {
-    
-
     width: 100%;
     max-width: 448px;
     height: 95px;
@@ -59,27 +64,25 @@ export const Container = styled.div`
 
 
   /* Estilos para os botões + e - */
-button {
+.button-finalizar {
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  /* padding: 10px; */
   cursor: pointer;
   font-size: 1rem;
 }
 
-button:hover {
+.button-finalizar:hover {
   background-color: #0056b3;
 }
 
-button:disabled {
+.button-finalizar:disabled {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
 }
 
-button:disabled:hover {
+.button-finalizar:disabled:hover {
   background-color: #ccc;
 }
 

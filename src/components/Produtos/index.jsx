@@ -1,35 +1,44 @@
-import { useNavigate } from "react-router-dom";
-import { Container } from "./styles";
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
-import bag from "../../assets/icons/shopping-bag.svg"
+import { Container } from "./styles";
+import bag from "../../assets/icons/shopping-bag.svg";
+import { AppContext } from "../../context/AppContext";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 export const Produtos = (props) => {
-  const navigate = useNavigate();
+  const { brand, name, price, description } = props;
+  const { cartItems, setCartItems } = useContext(AppContext);
+  
+
+  const handleAddCart = () => {
+    const newItem = { brand, name, price, description }; 
+    setCartItems([...cartItems, newItem]);
+  };
 
   return (
     <Container>
       <div className="produtos">
-        <img src={props.photo || <Skeleton />} alt="" />
+        <img src={brand || <Skeleton />} alt="" />{" "}
         <div className="produtos__titulo">
-          <h2>{props.title || <Skeleton />}</h2>
-          <span>{props.preco || <Skeleton />}</span>
+          <h2>{name || <Skeleton />}</h2>{" "}
+          <span>{formatCurrency(price, 'BRL') || <Skeleton />}</span>{" "}
         </div>
-        <p>{props.description || <Skeleton />}</p>
+        <p>{description || <Skeleton />}</p>{" "}
       </div>
-      <button onClick={() => navigate("/produtos")}>
+      <button onClick={handleAddCart}>
         <img className="bag" src={bag} alt="" />
         Comprar
-        </button>
+      </button>
+      
     </Container>
   );
 };
 
 Produtos.propTypes = {
-  photo: PropTypes.string,
-  title: PropTypes.string,
-  preco: PropTypes.string,
+  brand: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.number,
   description: PropTypes.string,
 };

@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import { Produtos } from "../../components/Produtos";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Carrinho } from "../../components/Carrinho";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 export default function Home() {
-  // const navigate = useNavigate();
   const [produtos, setProdutos] = useState([]);
   const [loading, setLoading] = useState(true);
   const api = import.meta.env.VITE_API_MKS;
@@ -21,11 +20,11 @@ export default function Home() {
         setLoading(false);
       })
       .catch((error) => console.error("Erro ao buscar produtos:", error));
-  }, []);
+  }, [api]);
 
   return (
     <Container>
-      <Carrinho/>
+      <Carrinho />
       <div className="page">
         <div className="card-container">
           {loading
@@ -39,9 +38,9 @@ export default function Home() {
             : produtos.map((produto) => (
                 <Produtos
                   key={produto.id}
-                  photo={produto.photo}
-                  title={produto.name}
-                  preco={produto.price}
+                  brand={produto.photo}
+                  name={produto.name}
+                  price={formatCurrency(produto.price, 'BRL')}
                   description={produto.description}
                 />
               ))}
