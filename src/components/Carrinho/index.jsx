@@ -6,7 +6,12 @@ import { AppContext } from "../../context/AppContext";
 
 export const Carrinho = () => {
   const { cartItems } = useContext(AppContext);
-  const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0)
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + Number(item.price),
+    0
+  );
+
+
   return (
     <Container>
       <div className="carrinho">
@@ -14,12 +19,12 @@ export const Carrinho = () => {
       </div>
       { cartItems.map((cartItem) => <CartItem key={cartItem.id} data={cartItem} />)}
       
-        <span>{formatCurrency(totalPrice, 'BRL')}</span>
+        <h2>{formatCurrency(totalPrice, 'BRL')}</h2>
       
 
-      {/* <button type="button" className="button-finalizar">
+      <button type="button" className="button-finalizar">
         Finalizar Compra
-      </button> */}
+      </button> 
     </Container>
   );
 };
