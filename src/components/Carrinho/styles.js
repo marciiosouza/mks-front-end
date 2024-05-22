@@ -1,14 +1,31 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrinho-title {
+  padding: 22px 0;
+}
+
+.carrinho {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart{
   display: flex;
   flex-direction: column;
  
- 
+  transform: translate(110%, 0);
+  transition: all 400ms ease;
 
   flex-grow: 1;
   overflow: auto;
-
 
   gap: 12px;
 
@@ -23,111 +40,62 @@ export const Container = styled.div`
   right: 0;
   
   padding: 100px  20px 20px;
+}
+
+.cart--active {
+  transform: translate(0, 0);
+}
+
+.resumo-compras {
+  width: 100%;
+  max-width: 448px;
+  height: 95px;
   
-  z-index: 1;
-  
-  .carrinho {
-    padding: 0 0 22px 0;
-  }
-  .resumo-compras {
-    width: 100%;
-    max-width: 448px;
-    height: 95px;
-    
-    border-radius: 8px;
-    color: ${({ theme }) => theme.COLORS.DARK};
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
-
-  }
-
-  .resumo-container {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-
-    padding: 19px 24px;
-  }
-  
-  .resumo-container h2 {
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .resumo-compras span {
-    font-weight: 700;
-    font-size: 14px;
-  }
-
-  .resumo-compras img {
-    width: 46px;
-  }
-
-
-  /* Estilos para os botões + e - */
-.button-finalizar {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
+  border-radius: 8px;
+  color: ${({ theme }) => theme.COLORS.DARK};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
 }
 
-.button-finalizar:hover {
-  background-color: #0056b3;
-}
-
-.button-finalizar:disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
-}
-
-.button-finalizar:disabled:hover {
-  background-color: #ccc;
-}
-
-.resumo-container img {
-  width: 18px;
-
-  position: relative;
-  top: 0;
-  right: 0;
-}
-
-.quant-btn {
+.resumo-container {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 22px;
+
+  padding: 19px 24px;
 }
 
-  .button-finalizar {
-    width: 100%;
-    /* max-width: 330px; */
-    right: 0;
-    bottom: 0;
-
-    padding: 40px 0;
-    position: absolute;
-
-    font-size: 22px;
-    font-weight: 700;
-
-    border: none;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND};
-    background-color: ${({ theme }) => theme.COLORS.DARK};
-
+.resumo-container h2 {
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px;
+.resumo-compras span {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.resumo-compras img {
+  width: 46px;
+}
+
+.total-cart-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 22px 0;
+}
+
+.button-finalizar {
   cursor: pointer;
+  width: 100%;
+  padding: 40px 0;
 
+  font-size: 22px;
+  font-weight: 700;
 
-  /* margin-right: 0.5rem; */
+  border: none;
+  color: ${({ theme }) => theme.COLORS.BACKGROUND};
+  background-color: ${({ theme }) => theme.COLORS.DARK};
 }
-
 
 `

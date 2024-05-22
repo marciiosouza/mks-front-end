@@ -3,8 +3,6 @@ import Home from "../pages/Home"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { PageLayout } from "../pages/PageLayout"
-import { Carrinho } from "../components/Carrinho"
-
 
 export function AppRoutes() {
   return (

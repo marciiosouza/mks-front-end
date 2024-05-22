@@ -43,4 +43,28 @@ gap: 12px;
   background: none;
   color: ${({ theme }) => theme.COLORS.DARK};
 }
+
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quantity-controls input{
+  border: none;
+  width: 100%;
+  
+}
+
+.quantity-controls button {
+  background-color: #ccc;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
+}
+
 `

@@ -5,6 +5,11 @@ padding: 29px 65px;
 background:  ${({ theme }) => theme.COLORS.BLUE};
 color:  ${({ theme }) => theme.COLORS.BACKGROUND};
 
+z-index: 1;
+position: fixed;
+top: 0;
+width: 100%;
+
 @media screen and (max-width: 938px) {
   
   padding: 12px 24px;
@@ -29,7 +34,7 @@ h1 {
   font-weight: 300;
 }
 
-#box-produtcs {
+.cart-produtcs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,5 +47,11 @@ h1 {
   background-color:  ${({ theme }) => theme.COLORS.BACKGROUND};
 
   border-radius: 8px;
+  border: none;
+}
+
+#button--cart {
+  border: none;
+  cursor: pointer;
 }
 `
