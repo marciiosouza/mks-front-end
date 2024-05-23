@@ -27,9 +27,16 @@ export const CartItem = ({ data }) => {
 
   return (
     <Container>
-      <div className="cart-item-content">
-        <img src={brand} alt="Imagem do Produto" className="cart-item-image" />
-        <h2 className="cart-item-title">{name}</h2>
+      <section>
+        <div className="info-products">
+          <img
+            src={brand}
+            alt="Imagem do Produto"
+            className="cart-item-image"
+          />
+          <h2 className="cart-item-title">{name}</h2>
+        </div>
+
         <div className="quant-item">
           <p>Qtd:</p>
           <div className="quantity-controls">
@@ -38,7 +45,7 @@ export const CartItem = ({ data }) => {
               type="number"
               value={quantity}
               readOnly
-              style={{ width: "40px", textAlign: "center" }}
+              className="quant-input"
             />
             <button onClick={handleIncrement}>+</button>
           </div>
@@ -46,13 +53,13 @@ export const CartItem = ({ data }) => {
         <h3 className="cart-item-price">
           {formatCurrency(price * quantity, "BRL")}
         </h3>
-        <button
+      </section>
+      <div className="btn-close">
+        <IoCloseCircle
           type="button"
           className="button__remove-item"
           onClick={handleRemoveItem}
-        >
-          <IoCloseCircle />
-        </button>
+        />
       </div>
     </Container>
   );
