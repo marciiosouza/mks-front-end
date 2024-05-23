@@ -8,11 +8,11 @@ import { AppContext } from "../../context/AppContext";
 import { formatCurrency } from "../../utils/formatCurrency";
 
 export const ProductsCard = ({ id, brand, name, price, description }) => {
-  const { addItemToCart, cartItems } = useContext(AppContext);
+  const { addItemToCart } = useContext(AppContext);
 
   const handleAddCart = () => {
     const newItem = { id, brand, name, price, description };
-    addItemToCart(...cartItems, newItem);
+    addItemToCart(newItem);
   };
 
   return (

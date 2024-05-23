@@ -6,8 +6,6 @@ export const Provider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [isCartVisible, setIsCartVisible] = useState(false);
 
-  
-
   const updateItemQuantity = (id, quantity) => {
     const updatedItems = cartItems.map((item) =>
       item.id === id ? { ...item, quantity } : item
