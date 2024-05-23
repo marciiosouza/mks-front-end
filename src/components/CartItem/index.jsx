@@ -32,7 +32,6 @@ export const CartItem = ({ data }) => {
         <h2 className="cart-item-title">{name}</h2>
         <div className="quant-item">
           <p>Qtd:</p>
-
           <div className="quantity-controls">
             <button onClick={handleDecrement}>-</button>
             <input
@@ -60,5 +59,11 @@ export const CartItem = ({ data }) => {
 };
 
 CartItem.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    brand: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    quantity: PropTypes.number.isRequired,
+  }).isRequired,
 };

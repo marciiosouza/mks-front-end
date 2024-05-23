@@ -35,10 +35,11 @@ export default function Home() {
               ))
             : products.map((product) => (
                 <ProductsCard
+                  id={product.id}
                   key={product.id}
                   brand={product.photo}
                   name={product.name}
-                  price={product.price} // Passa o preço como número
+                  price={Number(product.price)}
                   description={product.description}
                 />
               ))}

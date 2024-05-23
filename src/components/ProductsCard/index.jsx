@@ -1,5 +1,5 @@
 import { useContext } from "react";
-
+import PropTypes from "prop-types";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Container } from "./styles";
@@ -7,12 +7,12 @@ import { RiShoppingBag3Line } from "react-icons/ri";
 import { AppContext } from "../../context/AppContext";
 import { formatCurrency } from "../../utils/formatCurrency";
 
-export const ProductsCard = ({ brand, name, price, description }) => {
-  const { cartItems, setCartItems } = useContext(AppContext);
+export const ProductsCard = ({ id, brand, name, price, description }) => {
+  const { addItemToCart, cartItems } = useContext(AppContext);
 
   const handleAddCart = () => {
-    const newItem = { brand, name, price, description };
-    setCartItems([...cartItems, newItem]);
+    const newItem = { id, brand, name, price, description };
+    addItemToCart(...cartItems, newItem);
   };
 
   return (
@@ -33,3 +33,10 @@ export const ProductsCard = ({ brand, name, price, description }) => {
   );
 };
 
+ProductsCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  brand: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  description: PropTypes.string,
+};
