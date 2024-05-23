@@ -19,12 +19,17 @@ export const ProductsCard = ({ id, brand, name, price, description }) => {
     <Container>
       <div className="produtos">
         {brand ? <img src={brand} alt={name} /> : <Skeleton />}
-        <div className="produtos__titulo">
-          <h2>{name || <Skeleton />}</h2>
-          <span>{price ? formatCurrency(price, "BRL") : <Skeleton />}</span>
+
+        <div className="container">
+          <div className="produtos__titulo">
+            <h2>{name || <Skeleton />}</h2>
+          </div>
+            <span>{price ? formatCurrency(price, "BRL") : <Skeleton />}</span>
         </div>
+
         <p>{description || <Skeleton />}</p>
       </div>
+
       <button onClick={handleAddCart}>
         <RiShoppingBag3Line size={20} />
         Comprar

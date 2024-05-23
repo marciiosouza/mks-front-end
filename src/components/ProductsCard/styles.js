@@ -4,7 +4,7 @@ export const Container = styled.div`
 .produtos {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 
   width: 100%;
   height: 264px;
@@ -17,16 +17,30 @@ export const Container = styled.div`
 
 .produtos img {
   padding: 18px 0 0 0;
+  margin: auto;
 }
 
 img {
   width: 110px;
 }
 
-.produtos__titulo{
+.container {
   display: flex;
-  align-items: center;
-  gap: 4px;
+  justify-content: space-between;
+  align-items: center;  
+  gap: 12px;
+
+  margin-bottom: 10px;
+}
+
+.produtos__titulo{
+
+ 
+
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
 
   margin: 14px 0 8px 0;
 }
@@ -47,7 +61,7 @@ span {
 }
 
 p {
-  margin: 0 0 12px 0;
+  margin: 0 0 18px 0;
   font-weight: 300;
   color:  ${({ theme }) => theme.COLORS.GRAY_800};
 }
@@ -80,8 +94,6 @@ button .bag {
   width: 18px;
 }
 
-
-/* styles.css */
 .skeleton-container {
   display: flex;
   flex-direction: column;
@@ -96,7 +108,7 @@ button .bag {
 
 .skeleton-image {
   width: 100%;
-  height: 200px; /* Ajuste conforme necessário */
+  height: 200px;
   border-radius: 8px 8px 0 0;
 }
 

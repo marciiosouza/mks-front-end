@@ -3,7 +3,7 @@ import { Container } from "./styles";
 import { ProductsCard } from "../../components/ProductsCard";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { Carrinho } from "../../components/Carrinho";
+import { Cart } from "../../components/Cart";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <Container>
-      <Carrinho />
+      <Cart />
       <div className="page">
         <div className="card-container">
           {loading

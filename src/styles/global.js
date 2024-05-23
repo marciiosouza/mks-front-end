@@ -8,16 +8,16 @@ export default createGlobalStyle`
   }
 
   html, body {
-    // font-size: 62.5%;
+    font-size: 62.5%;
     height: 100%;
     -webkit-font-smoothing: antialiased; 
 
     font-family: "Montserrat", sans-serif;
-    font-weigth: 400;
+    /* font-weigth: 400; */
   }
 
   body {
-    font-size: 0.7rem;
+    font-size: 1.1rem;
   }
 
 

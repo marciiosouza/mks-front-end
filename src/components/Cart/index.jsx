@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import { IoCloseCircle } from "react-icons/io5";
 
-export const Carrinho = () => {
+export const Cart = () => {
   const { cartItems, isCartVisible, setIsCartVisible } = useContext(AppContext);
   const [totalPrice, setTotalPrice] = useState(0);
 
