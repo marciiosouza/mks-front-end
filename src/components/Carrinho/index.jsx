@@ -25,6 +25,7 @@ export const Carrinho = () => {
     <Container>
       <section className={`cart ${isCartVisible ? "cart--active" : ""}`}>
         <div className="carrinho">
+
           <div className="shop-cart">
             <h1 className="carrinho-title">Carrinho de Compras</h1>
             <IoCloseCircle
@@ -33,6 +34,7 @@ export const Carrinho = () => {
             />
           </div>
 
+          
           {cartItems.length > 0 ? (
             cartItems.map((cartItem) => (
               <CartItem key={cartItem.id} data={cartItem} />
@@ -41,14 +43,18 @@ export const Carrinho = () => {
             <p className="empty-cart-message">Seu carrinho está vazio</p>
           )}
         </div>
-        <div className="total-cart-item">
-          <h2>Total: </h2>
-          <h2>{formatCurrency(totalPrice, "BRL")}</h2>
-        </div>
+      <main>
+          <div className="total-cart-item">
+            <h2>Total: </h2>
+            <h2>{formatCurrency(totalPrice, "BRL")}</h2>
+          </div>
+
+        <button type="button" className="button-finalizar">
+          Finalizar Compra
+        </button>
+      </main>
       </section>
-      <button type="button" className="button-finalizar">
-        Finalizar Compra
-      </button>
+
     </Container>
   );
 };
