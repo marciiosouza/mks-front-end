@@ -7,8 +7,23 @@ section {
   justify-content: space-between;
 }
 
+.shop-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 0 60px 0;
+}
+
+.cart-produtcs-shop {
+  width: 38px;
+  height: 38px;
+  color:  ${({ theme }) => theme.COLORS.DARK};
+}
+
 .carrinho-title {
-  padding: 22px 0;
+  font-size: 28px;
+  max-width: 180px;
 }
 
 .carrinho {
@@ -35,11 +50,12 @@ section {
 
   color: ${({ theme }) => theme.COLORS.BACKGROUND};
   background-color: ${({ theme }) => theme.COLORS.BLUE};
+  box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
   position: fixed;
   top: 0;
   right: 0;
   
-  padding: 100px  20px 20px;
+  padding: 46px  20px 20px;
 }
 
 .cart--active {

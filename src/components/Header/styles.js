@@ -5,7 +5,7 @@ padding: 29px 65px;
 background:  ${({ theme }) => theme.COLORS.BLUE};
 color:  ${({ theme }) => theme.COLORS.BACKGROUND};
 
-z-index: 1;
+/* z-index: 1; */
 position: fixed;
 top: 0;
 width: 100%;
