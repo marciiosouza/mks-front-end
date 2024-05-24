@@ -84,4 +84,7 @@ section {
   background-color: ${({ theme }) => theme.COLORS.DARK};
 }
 
+.my-toast {
+  padding: 16px;
+}
 `

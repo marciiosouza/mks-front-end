@@ -23,6 +23,10 @@ export const Provider = ({ children }) => {
     }
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const value = {
     cartItems,
     setCartItems,
@@ -30,6 +34,7 @@ export const Provider = ({ children }) => {
     setIsCartVisible,
     updateItemQuantity,
     addItemToCart,
+    clearCart,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
