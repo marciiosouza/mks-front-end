@@ -4,17 +4,15 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 17px 20px;
   position: relative;
 
   width: 397px;
   height: 95px;
-
   border-radius: 8px;
   color: ${({ theme }) => theme.COLORS.DARK};
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
-  box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.05);
-
-  padding: 17px 20px;
+  box-shadow: -2px 2px 10px 0px ${({ theme }) => theme.COLORS.SHADOW};
 
   .info-products {
     display: flex;
@@ -47,14 +45,14 @@ export const Container = styled.div`
   .quantity-controls {
     display: flex;
     border-radius: 4px;
-    border: 0.3px solid #bfbfbf;
+    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   .quantity-controls input {
     width: 26px;
     margin: auto;
-    border-left: 0.3px solid #bfbfbf;
-    border-right: 0.3px solid #bfbfbf;
+    border-left: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
+    border-right: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
     border-top: none;
     border-bottom: none;
     text-align: center;

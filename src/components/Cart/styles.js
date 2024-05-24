@@ -25,12 +25,11 @@ section {
 
   color: ${({ theme }) => theme.COLORS.BACKGROUND};
   background-color: ${({ theme }) => theme.COLORS.BLUE};
-  box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: -5px 0px 6px 0px ${({ theme }) => theme.COLORS.SHADOW};
   position: fixed;
   top: 0;
   right: 0;
-  
-  /* padding: 46px  20px 20px; */
+  z-index: 2;
 }
 
 .cart--active {

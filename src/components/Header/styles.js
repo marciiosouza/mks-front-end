@@ -5,15 +5,13 @@ padding: 29px 65px;
 background:  ${({ theme }) => theme.COLORS.BLUE};
 color:  ${({ theme }) => theme.COLORS.BACKGROUND};
 
-/* z-index: 1; */
+z-index: 1;
 position: fixed;
 top: 0;
 width: 100%;
 
 @media screen and (max-width: 938px) {
-  
   padding: 12px 24px;
-
   }
 
 .brand {
@@ -42,10 +40,8 @@ h1 {
 
   width: 90px;
   height: 45px;
-
   color:  ${({ theme }) => theme.COLORS.DARK};
   background-color:  ${({ theme }) => theme.COLORS.BACKGROUND};
-
   border-radius: 8px;
   border: none;
 }

@@ -4,7 +4,6 @@ export const Container = styled.div`
 .produtos {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 
   width: 100%;
   height: 264px;
@@ -12,7 +11,6 @@ export const Container = styled.div`
   padding: 0 14px;
   border-radius: 8px 8px 0 0;
   box-shadow: 2px 1px 8px 2px  ${({ theme }) => theme.COLORS.SHADOW};
-
 }
 
 .produtos img {
@@ -34,9 +32,6 @@ img {
 }
 
 .produtos__titulo{
-
- 
-
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -48,14 +43,11 @@ img {
 span {
   display: flex;
   align-items: center;
+  padding: 4px 8px;
 
   height: 26px;
-  
   font-weight: bold;
-
-  padding: 4px 8px;
   border-radius: 5px;
-
   color:  ${({ theme }) => theme.COLORS.BACKGROUND};
   background-color:  ${({ theme }) => theme.COLORS.GRAY_700};
 }
@@ -71,22 +63,18 @@ button {
   justify-content: center;
   align-items: center;
   gap: 8px;
-
-  width: 100%;
   padding: 9px 0;
 
-
+  width: 100%;
   border-radius: 0 0 8px 8px;
   border: none;
 
   font-style: normal;
   font-weight: 600;
-
   text-transform: uppercase;
 
   color: ${({ theme }) => theme.COLORS.BACKGROUND};
   background-color: ${({ theme }) => theme.COLORS.BLUE};
-
   cursor: pointer;
 }
 
@@ -135,5 +123,4 @@ button .bag {
   height: 40px;
   border-radius: 0 0 8px 8px;
 }
-
 `

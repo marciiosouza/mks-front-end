@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-.page {
-
-}
 
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 22px;
 
-  margin: 116px auto;
+  margin: 232px auto 116px;
   max-width: 1024px;
   width: 100%;
 }
