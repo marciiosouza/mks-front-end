@@ -48,6 +48,11 @@ export const Container = styled.div`
     border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
+  input[type="number"] {
+    text-align: center;
+    width: 70px;
+}
+
   .quantity-controls input {
     width: 26px;
     margin: auto;
